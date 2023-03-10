@@ -42,5 +42,10 @@
 --  4  E  555.323077
 --
 --  >>> Escriba su codigo a partir de este punto <<<
---  
+select K0, avg(c21)
+from tbl1 as t
+INNER JOIN tbl2 as t2
+	on t.K1 = t2.K1
+WHERE t.c13>400
+GROUP BY t.K0;
 
