@@ -37,4 +37,11 @@
 --  0  2018     6
 --
 --  >>> Escriba su codigo a partir de este punto <<<
--- 
+--select strftime('%Y',c14) AS YEAR, COUNT(*) 
+--from tbl1
+--GROUP BY YEAR
+--HAVING YEAR='2018';
+select COUNT(*) 
+from tbl1
+GROUP BY strftime('%Y',c14)
+HAVING strftime('%Y',c14)='2018';
